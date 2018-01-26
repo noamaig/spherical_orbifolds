@@ -37,7 +37,7 @@ classdef Solver <handle
             clamp=1e-3;
             negs=nnz(W<0);
             if negs
-                warning('clamping %d negative weights',negs);
+                %warning('clamping %d negative weights',negs);
             end
             W(W<0)=clamp;
             obj.W=double(single(W));

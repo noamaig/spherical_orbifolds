@@ -1,6 +1,6 @@
 # Spherical Orbifold Tutte Embeddings
 
-Matlab code implementing the [Siggraph 2017 paper, "Spherical Orbifold Tutte Embeddings"](https://noamaig.github.io/html/projects/spherical/spherical_low.pdf).
+Matlab code implementing the [Siggraph 2017 paper, "Spherical Orbifold Tutte Embeddings"](https://noamaig.github.io/html/projects/spherical/lowres.pdf).
 
 An extension of Tutte's embedding to spherical domains, namely spherical orbifolds - tilings of the sphere.
 
