@@ -37,7 +37,7 @@ clf;
 
 % draw the tiling of the embedding on the sphere
 subplot(1,2,2);
-e.draw('tileboundary',true,'colormap','bronze','tilepale',0.8);
+e.draw('tileboundary',true,'tilepale',0.8);
 ax=gca;
 ax.CameraViewAngle=8.3;
 campos([      -2.7762    8.5443    5.3982]);

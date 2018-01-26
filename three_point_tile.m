@@ -1,5 +1,5 @@
-function P=three_point_tile(indices,disk)
-%given 3 angles of the cones, return the 4 vertices of the tiles
+function P=three_point_tile(cone_order,disk)
+%given 3 angles of the cones, return the 4 vertices of the tile
 
 % angles 1 and 3 are divided because we take half a triangle, angle 2 is
 % divided for another reason - that cone is a hybrid
@@ -7,7 +7,7 @@ if nargin<2
     disk=false;
 end
 
-angs=2*pi./indices;
+angs=2*pi./cone_order;
 if ~disk
     realangs=angs/2;
 else

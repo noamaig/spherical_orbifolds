@@ -64,3 +64,4 @@ orbifolds_publish/OrbifoldType.m
 orbifolds_publish
 paper
 *.m~
+*.md~

@@ -1,19 +1,15 @@
 %==========================================================================
 % Example script for computing embeddings of disk-topology meshes into
-% disk-topology spherical orbifolds.
+% a convex spherical polygon.
 %==========================================================================
 %% Init + load data
 init;
-load  fandisk.mat % NOTE THIS IS THE FANDISK WITH THE BOTTOM REMOVED SO IT'S A DISK!!!!!
+load  fandisk.mat % NOTE THIS IS THE FANDISK WITH THE BOTTOM REMOVED SO IT HAS DISK TOPOLOGY!!!!!
 
-%% embedding the mesh into the orbifold
-% each orbifold type according to Fig. 2 in the paper, left 5
-% examples (sphere-topology), choose a different orbifold_type to see
-% embeddings into the different orbifolds.
+%% Code for generating boundary conditions
+% choosing seven vertices on the boundary and fixing them to seven corners of a perfect spherical
+% septagon
 
-%% setup
-init;
-load fandisk.mat
 tri=triangulation(T,V);
 b=tri.freeBoundary();
 b=b(:,1);
@@ -24,7 +20,13 @@ theta=theta(1:end-1)';
 fac=1;
 pos=[cos(theta)*fac sin(theta)*fac ones(length(theta),1)];
 pos=bsxfun(@mrdivide,pos',sqrt(sum(pos'.^2)))';
-%% computing
+
+
+%% embedding the mesh into the orbifold
+% each orbifold type according to Fig. 2 in the paper, left 5
+% examples (sphere-topology), choose a different orbifold_type to see
+% embeddings into the different orbifolds.
+
 e=embed_from_data(V,T,pos,inds);
 
 
